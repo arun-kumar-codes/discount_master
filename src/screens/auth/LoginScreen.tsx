@@ -44,10 +44,6 @@ export default function LoginScreen() {
     await login(email.trim(), password);
   };
 
-  const handleSkip = async () => {
-    await login('customer@discounts.app', 'demo');
-  };
-
   return (
     <SafeAreaView style={styles.safe}>
       <StatusBar style="dark" />
@@ -130,19 +126,6 @@ export default function LoginScreen() {
               <Text style={styles.registerLink}>Sign Up</Text>
             </TouchableOpacity>
           </View>
-
-          {/* Debug skip */}
-          <TouchableOpacity style={styles.skipBtn} onPress={handleSkip}>
-            <Text style={styles.skipText}>Skip Login (Debug)</Text>
-          </TouchableOpacity>
-
-          {/* Demo hint */}
-          <View style={styles.hintBox}>
-            <Text style={styles.hintTitle}>Demo credentials</Text>
-            <Text style={styles.hintText}>Customer: customer@discounts.app</Text>
-            <Text style={styles.hintText}>Merchant: merchant@discounts.app</Text>
-            <Text style={styles.hintText}>Password: any</Text>
-          </View>
         </ScrollView>
       </KeyboardAvoidingView>
     </SafeAreaView>
@@ -187,16 +170,4 @@ const styles = StyleSheet.create({
   registerRow: { flexDirection: 'row', justifyContent: 'center', marginTop: 24 },
   registerText: { color: Colors.textSecondary, fontSize: 14 },
   registerLink: { color: Colors.primary, fontSize: 14, fontWeight: '700' },
-  skipBtn: { marginTop: 20, alignItems: 'center' },
-  skipText: { color: Colors.primaryLight, fontSize: 14 },
-  hintBox: {
-    marginTop: 32,
-    padding: 16,
-    backgroundColor: Colors.backgroundSecondary,
-    borderRadius: 12,
-    borderWidth: 1,
-    borderColor: Colors.border,
-  },
-  hintTitle: { fontWeight: '700', color: Colors.text, marginBottom: 6, fontSize: 13 },
-  hintText: { color: Colors.textLight, fontSize: 12, marginBottom: 2 },
 });
