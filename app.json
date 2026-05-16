@@ -1,0 +1,26 @@
+{
+  "expo": {
+    "name": "Discounts",
+    "slug": "discounts-expo",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "userInterfaceStyle": "light",
+    "splash": {
+      "resizeMode": "contain",
+      "backgroundColor": "#23446A"
+    },
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "com.discounts.app"
+    },
+    "android": {
+      "adaptiveIcon": {
+        "backgroundColor": "#23446A"
+      },
+      "package": "com.discounts.app"
+    },
+    "web": {
+      "bundler": "metro"
+    }
+  }
+}
